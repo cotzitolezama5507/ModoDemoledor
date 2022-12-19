@@ -20,8 +20,11 @@ Route::get('/about', 'App\Http\Controllers\HomeController@about')->name("home.ab
 Route::get('/book', 'App\Http\Controllers\BookController@index')->name("book.index");
 Route::get('/book/{id}', 'App\Http\Controllers\BookController@show')->name("book.show");
 
+
 Route::get('/loan', 'App\Http\Controllers\LoanController@index')->name("loan.index");
 Route::get('/loan/{id}', 'App\Http\Controllers\LoanController@show')->name("loan.show");
+
+Route::post('/book/store', 'App\Http\Controllers\BookController@store')->name("loan.store");
 
 
 Route::middleware('admin')->group(function () {
